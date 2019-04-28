@@ -17,6 +17,7 @@ class HXH_Skin: NSObject {
         set{
             _skinType = newValue;
             NotificationCenter.default.post(name: NSNotification.Name("skinType"), object: nil);
+            
         }
         get{
             return _skinType;
