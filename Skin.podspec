@@ -23,9 +23,11 @@ TODO: Add long description of the pod here.
 
   s.homepage         = 'https://github.com/huzhaohao/Skin'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.summary          = '黑白皮肤颜色切换实现'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'huzhaohao' => '1009681836@qq.com' }
   s.source           = { :git => 'https://github.com/huzhaohao/Skin.git', :tag => s.version.to_s }
+  s.swift_version = '5.0'
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
