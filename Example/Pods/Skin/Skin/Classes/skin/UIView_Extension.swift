@@ -18,7 +18,7 @@ extension UIView {
         static var backGroudcolor_SkinKey : String = "backGroudcolor_SkinKey"
     }
     
-     @objc   var backGroudcolor_SkinKey: String{
+    public  var backGroudcolor_SkinKey: String{
         get{
            return objc_getAssociatedObject(self, &XKeys.backGroudcolor_SkinKey) as! String
         }
@@ -27,9 +27,11 @@ extension UIView {
              objc_setAssociatedObject(self, &XKeys.backGroudcolor_SkinKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    @objc  func skinFresh() -> Void {
-        self.backgroundColor = HXH_Skin.color(key: backGroudcolor_SkinKey );
-       
+   @objc public  func skinFresh() -> Void {
+        
+        if(backGroudcolor_SkinKey.count > 0){
+            self.backgroundColor = HXH_Skin.color(key: backGroudcolor_SkinKey);
+        }
         for subview in self.subviews {
             subview.skinFresh();
         }
@@ -116,23 +118,6 @@ extension UIView {
         }
     }
 }
-//MARK: 暂时存放
-extension UIColor {
-    
-    public func colorWithHex(rgb:Int, alpha: CGFloat) -> UIColor {
-        return UIColor(red: ((CGFloat)((rgb & 0xFF0000) >> 16))/255.0, green: ((CGFloat)((rgb & 0xFF00) >> 8))/255.0, blue: ((CGFloat)(rgb & 0xFF)) / 255.0, alpha: alpha)
-    }
-    
-    // 红色
-    class var Red: UIColor {
-        return UIColor(red: 252/255.0, green: 106/255.0, blue: 125/255.0, alpha: 1.0)
-    }
-    
-    // 灰色背景颜色
-    class var Gray: UIColor {
-        return UIColor(red: 242/255.0, green: 243/255.0, blue: 248/255.0, alpha: 1.0)
-    }
-}
 
 extension UILabel {
     struct XKeys {
@@ -147,8 +132,13 @@ extension UILabel {
             objc_setAssociatedObject(self, &XKeys.textColor_SkinKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-    override func skinFresh() -> Void {
-        self.backgroundColor = HXH_Skin.color(key: backGroudcolor_SkinKey );
-        self.textColor = HXH_Skin.color(key: textColor_SkinKey);
+     override  public func skinFresh() -> Void {
+        
+        if(backGroudcolor_SkinKey.count > 0){
+            self.backgroundColor = HXH_Skin.color(key: backGroudcolor_SkinKey);
+        }
+        if(textColor_SkinKey.count > 0){
+            self.textColor = HXH_Skin.color(key: textColor_SkinKey);
+        }
     }
 }

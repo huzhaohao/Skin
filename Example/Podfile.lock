@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - Skin (0.1.0)
+  - Skin (0.1.1)
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
@@ -20,7 +20,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Skin: aafa2136909c0d909387cc9a5b6653abe12ecf25
+  Skin: 61696a61fc6b536d30f381bffcdb840ab6778c18
 
 PODFILE CHECKSUM: 49a0544aaa42cca96c8478c3171a0e02541b4108
 
