@@ -1,7 +1,8 @@
 use_frameworks!
 
 target 'Skin_Example' do
-  pod 'Skin', :path => '../'
+  #  pod 'Skin', :path => '../'
+  pod 'Skin', :podspec => '../Skin.podspec'
 
   target 'Skin_Tests' do
     inherit! :search_paths

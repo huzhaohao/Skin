@@ -13,7 +13,7 @@ class HXH_Skin: NSObject {
     
     //MARK: -设置皮肤类型
     static var _skinType: NSInteger = 0;
-    public static var skinType: NSInteger {
+    static var skinType: NSInteger {
         set{
             _skinType = newValue;
             NotificationCenter.default.post(name: NSNotification.Name("skinType"), object: nil);
@@ -27,7 +27,7 @@ class HXH_Skin: NSObject {
     ///
     /// - Parameter key: skin**.pist文件里面的key
     /// - Returns: 在某种皮肤下的颜色
-   public class func color(key:String) -> UIColor {
+    class func color(key:String) -> UIColor {
         
         let colorStr:String! = self.skinDic().object(forKey: key) as? String;
         let color:UIColor = self.color(withHexString:colorStr as String, andAlpha: 1)!;
@@ -39,7 +39,7 @@ class HXH_Skin: NSObject {
     ///
     /// - Parameter key: skin**.pist文件里面的key
     /// - Returns: 在某种皮肤下的颜色
-    public class func getColorString(key:String) -> String {
+    class func getColorString(key:String) -> String {
         let value:String = self.skinDic().object(forKey: key) as! String;
         return value;
     }
@@ -49,7 +49,7 @@ class HXH_Skin: NSObject {
     ///
     /// - Parameter key: skin**.pist文件里面的key
     /// - Returns: 对应皮肤类型下的图片名
-    public class func imageName(key: String) -> String? {
+    class func imageName(key: String) -> String? {
         let name = self.skinDic().object(forKey: key) as? String
         return name
     }

@@ -8,7 +8,7 @@ PODS:
 
 DEPENDENCIES:
   - FBSnapshotTestCase (~> 2.1.4)
-  - Skin (from `../`)
+  - Skin (from `../Skin.podspec`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -16,12 +16,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   Skin:
-    :path: "../"
+    :podspec: "../Skin.podspec"
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Skin: 120ee2bc3923018f1fd036881dd6773167fd960b
+  Skin: aafa2136909c0d909387cc9a5b6653abe12ecf25
 
-PODFILE CHECKSUM: 29cc012884d283af4c8f4f9b340b997711725c38
+PODFILE CHECKSUM: 49a0544aaa42cca96c8478c3171a0e02541b4108
 
 COCOAPODS: 1.6.1
