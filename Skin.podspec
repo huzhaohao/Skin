@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Skin'
-  s.version          = '0.1.3'
+  s.version          = '0.1.2'
   s.summary          = '黑白皮肤颜色切换实现.'
 
 # This description is used to generate tags and improve search results.
