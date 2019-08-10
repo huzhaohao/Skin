@@ -29,11 +29,9 @@
 		8E08BAF7E7CF8950BF8E17F6620BD6EC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6942863E4F9C7B25B068D635E73BFD3 /* QuartzCore.framework */; };
 		AA90D38B952D894F9EA242FC97504ED2 /* FBSnapshotTestCase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B9438EB4F5C9C005B5A46B67FD4BEAE /* FBSnapshotTestCase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AAC4D80E2841DE55D2266A4B67863EC8 /* FBSnapshotTestCasePlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = C493823A7A35BC947F3BE75E4449C52B /* FBSnapshotTestCasePlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B240C5BEB2D84E05A07BF3958863D079 /* skin_0.plist in Sources */ = {isa = PBXBuildFile; fileRef = ADB4EBC2E832807DCE3D1ABE09503D34 /* skin_0.plist */; };
 		CFA869102744DB995F3AC930E96E3AFF /* UIApplication+StrictKeyWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = DE6BFB4955F6B8D9A282F841D1D9CA77 /* UIApplication+StrictKeyWindow.m */; };
 		D428498A1A70F3DB2F9D9C921989E6B8 /* UIImage+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = 41AFD0C8643646386006632A556BB34C /* UIImage+Compare.m */; };
 		D6B1B0AC7F376A0FC6DADEEAA737E508 /* UIImage+Compare.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D82DF6221FFB9E4E5B7A7FEB9FEC60B /* UIImage+Compare.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		DAF6A1DCFEB9D3CF2FCA3DBC96F08EFC /* skin_1.plist in Sources */ = {isa = PBXBuildFile; fileRef = 4D24D28CE19EE804B2A4282892A747CA /* skin_1.plist */; };
 		DBADABF56FC0675DEE45B90CE6AFA4E7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC5E9FF730C28FC315DD1249D72A070C /* UIKit.framework */; };
 		DE73444757E409A0E95231DDABDEBAB8 /* Skin-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC53B3391970062E61E8A0D6266D5FDF /* Skin-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E09F4DB2002AD79C3F69C3ACB6CEEC4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C97720D07754B8F519F93D7CA5AD48B /* Foundation.framework */; };
@@ -77,7 +75,6 @@
 		4774EB2BD48E82BB5D9CBBC775284465 /* UIImage+Snapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+Snapshot.h"; path = "FBSnapshotTestCase/Categories/UIImage+Snapshot.h"; sourceTree = "<group>"; };
 		48E9D606514B7FB18FDB3C65C7EFBCEC /* Pods-Skin_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Skin_Tests-Info.plist"; sourceTree = "<group>"; };
 		4B9438EB4F5C9C005B5A46B67FD4BEAE /* FBSnapshotTestCase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-umbrella.h"; sourceTree = "<group>"; };
-		4D24D28CE19EE804B2A4282892A747CA /* skin_1.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = skin_1.plist; path = Skin/Classes/skin/skin_1.plist; sourceTree = "<group>"; };
 		4D29C2305FD33548F5BC0B7810650F0A /* FBSnapshotTestCase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestCase.h; path = FBSnapshotTestCase/FBSnapshotTestCase.h; sourceTree = "<group>"; };
 		5027C821BE3E11F627367E2C537E2144 /* Pods-Skin_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Skin_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		581A54235BBCCDA89A7EE80E867123E2 /* UIView_Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIView_Extension.swift; path = Skin/Classes/skin/UIView_Extension.swift; sourceTree = "<group>"; };
@@ -100,7 +97,6 @@
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5674E1303EC1CCACF0A5F2A0D3764CF /* Pods-Skin_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Skin_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		A58F191A396ACB28C85EAB651B85D45F /* Skin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Skin-dummy.m"; sourceTree = "<group>"; };
-		ADB4EBC2E832807DCE3D1ABE09503D34 /* skin_0.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; name = skin_0.plist; path = Skin/Classes/skin/skin_0.plist; sourceTree = "<group>"; };
 		AFBF1E1B14075613AE67C750D93AD83E /* Pods-Skin_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Skin_Tests-umbrella.h"; sourceTree = "<group>"; };
 		B50730CD129F4F71548CC6ADD7EF753E /* FBSnapshotTestCase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FBSnapshotTestCase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA9C81EB2292B06BA54552615E98B7FC /* SwiftSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSupport.swift; path = FBSnapshotTestCase/SwiftSupport.swift; sourceTree = "<group>"; };
@@ -272,8 +268,6 @@
 			isa = PBXGroup;
 			children = (
 				D063D5B00FE817AC6A86837651A61F11 /* HXH_Skin.swift */,
-				ADB4EBC2E832807DCE3D1ABE09503D34 /* skin_0.plist */,
-				4D24D28CE19EE804B2A4282892A747CA /* skin_1.plist */,
 				581A54235BBCCDA89A7EE80E867123E2 /* UIView_Extension.swift */,
 				2095F68899CC44D70ACE6555880A00A8 /* Support Files */,
 			);
@@ -532,8 +526,6 @@
 			files = (
 				7D79874372A805D317286A504D3291D0 /* HXH_Skin.swift in Sources */,
 				76DDD0B4D20E4F15055F30444074663C /* Skin-dummy.m in Sources */,
-				B240C5BEB2D84E05A07BF3958863D079 /* skin_0.plist in Sources */,
-				DAF6A1DCFEB9D3CF2FCA3DBC96F08EFC /* skin_1.plist in Sources */,
 				3386271EF12A18C3BAD9E080228E090D /* UIView_Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
