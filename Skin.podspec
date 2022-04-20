@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Skin'
-  s.version          = '1.1.4'
+  s.version          = '1.1.5'
   s.summary          = 'A short description of Skin.'
 
 # This description is used to generate tags and improve search results.
