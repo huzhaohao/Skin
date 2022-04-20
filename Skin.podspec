@@ -25,7 +25,7 @@ TODO: Add long description of the pod here.
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'huzhaohao' => '1009681836@qq.com' }
-  s.source           = { :git => 'https://gitclone.com/github.com/huzhaohao/Skin.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/huzhaohao/Skin.git', :tag => s.version.to_s }
   s.swift_version = '5.0'
   # s.social_media_url = 'https://twitter.com/社交网址<TWITTER_USERNAME>'
 
