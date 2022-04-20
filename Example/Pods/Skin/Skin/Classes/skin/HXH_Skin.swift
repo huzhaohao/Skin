@@ -10,7 +10,6 @@ import UIKit
 
 @objc public class HXH_Skin: NSObject {
     
-    
     //MARK: -设置皮肤类型
     static var _skinType: NSInteger = 0;
     public static var skinType: NSInteger {
@@ -28,7 +27,6 @@ import UIKit
     /// - Parameter key: skin**.pist文件里面的key
     /// - Returns: 在某种皮肤下的颜色
    public class func color(key:String) -> UIColor {
-        
         let colorStr:String! = self.skinDic().object(forKey: key) as? String;
         let color:UIColor = self.color(withHexString:colorStr as String, andAlpha: 1)!;
         return color;
@@ -90,7 +88,8 @@ import UIKit
         var path:String? = Bundle.main.path(forResource: String.init(format: "skin_%ld",skinType), ofType: "plist");
         if(path == nil){
             path = Bundle.main.path(forResource: String.init(format: "skin_%ld",0), ofType: "plist");
-            return nil!;
+            let dic:NSDictionary! = NSDictionary.init(contentsOfFile: path!);
+            return dic ;
         }else{
             let dic:NSDictionary! = NSDictionary.init(contentsOfFile: path!);
             return dic ;
