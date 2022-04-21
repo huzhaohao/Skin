@@ -10,135 +10,85 @@ import Foundation
 import UIKit
 
 
-
+//extension UIView {
+//    //    // 改进写法【推荐】
+//        struct RuntimeKey {
+//            static let jkKey = UnsafeRawPointer.init(bitPattern: "JKKey".hashValue)
+//            /// ...其他Key声明
+//        }
+//
+//        public var jkPro: String? {
+//            set {
+//                objc_setAssociatedObject(self, UIView.RuntimeKey.jkKey!, newValue, .OBJC_ASSOCIATION_COPY_NONATOMIC)
+//            }
+//
+//            get {
+//                return  objc_getAssociatedObject(self, UIView.RuntimeKey.jkKey!) as? String
+//            }
+//        }
+//}
 
 extension UIView {
     
     struct XKeys {
-        static var backGroudcolor_SkinKey : String = "backGroudcolor_SkinKey"
+        static let backGroudcolor_SkinKey:UnsafeRawPointer! = UnsafeRawPointer.init(bitPattern: "backGroudcolor_SkinKey".hashValue)
+        static let textColor_SkinKey : String = "textColor_SkinKey"
     }
     
-    public  var backGroudcolor_SkinKey: String{
+    var backGroudcolor_SkinKey: String?{
         get{
-           return objc_getAssociatedObject(self, &XKeys.backGroudcolor_SkinKey) as! String
+            return (objc_getAssociatedObject(self, XKeys.backGroudcolor_SkinKey)  as? String)
         }
+        
         set{
-            self.backgroundColor = HXH_Skin.color(key: newValue );
-             objc_setAssociatedObject(self, &XKeys.backGroudcolor_SkinKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, XKeys.backGroudcolor_SkinKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
+    
+    @objc public func backGroudColorKey(key:String) {
+        // TODO: - 提醒
+        backGroudcolor_SkinKey = key
+//        print(backGroudcolor_SkinKey)
+        self.backgroundColor = HXH_Skin.color(key: backGroudcolor_SkinKey!);
+    }
+    
    @objc public  func skinFresh() -> Void {
         
-        if(backGroudcolor_SkinKey.count > 0){
-            self.backgroundColor = HXH_Skin.color(key: backGroudcolor_SkinKey);
-        }
-        for subview in self.subviews {
+       if(backGroudcolor_SkinKey?.count ?? 0 > 0){
+           self.backgroundColor = HXH_Skin.color(key: backGroudcolor_SkinKey!);
+       }
+       for subview in self.subviews {
             subview.skinFresh();
-        }
-    }
-    // .x
-    public var x: CGFloat {
-        get {
-            return self.frame.origin.x
-        }
-        set {
-            var rect = self.frame
-            rect.origin.x = newValue
-            self.frame = rect
-        }
-    }
-    
-    // .y
-    public var y: CGFloat {
-        get {
-            return self.frame.origin.y
-        }
-        set {
-            var rect = self.frame
-            rect.origin.y = newValue
-            self.frame = rect
-        }
-    }
-    
-    // .maxX
-    public var maxX: CGFloat {
-        get {
-            return self.frame.maxX
-        }
-    }
-    
-    // .maxY
-    public var maxY: CGFloat {
-        get {
-            return self.frame.maxY
-        }
-    }
-    
-    // .centerX
-    public var centerX: CGFloat {
-        get {
-            return self.center.x
-        }
-        set {
-            self.center = CGPoint(x: newValue, y: self.center.y)
-        }
-    }
-    
-    // .centerY
-    public var centerY: CGFloat {
-        get {
-            return self.center.y
-        }
-        set {
-            self.center = CGPoint(x: self.center.x, y: newValue)
-        }
-    }
-    
-    // .width
-    public var width: CGFloat {
-        get {
-            return self.frame.size.width
-        }
-        set {
-            var rect = self.frame
-            rect.size.width = newValue
-            self.frame = rect
-        }
-    }
-    
-    // .height
-    public var height: CGFloat {
-        get {
-            return self.frame.size.height
-        }
-        set {
-            var rect = self.frame
-            rect.size.height = newValue
-            self.frame = rect
-        }
+       }
     }
 }
 
 extension UILabel {
-    struct XKeys {
-        static var textColor_SkinKey : String = "textColor_SkinKey"
-    }
-    public  var textColor_SkinKey: String{
+
+    var textColor_SkinKey: String?{
         get{
-            return objc_getAssociatedObject(self, &XKeys.textColor_SkinKey) as! String
+            return (objc_getAssociatedObject(self, XKeys.textColor_SkinKey)  as? String)
         }
+        
         set{
-            self.textColor = HXH_Skin.color(key: newValue );
-            objc_setAssociatedObject(self, &XKeys.textColor_SkinKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+            objc_setAssociatedObject(self, XKeys.textColor_SkinKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
         }
     }
-     override  public func skinFresh() -> Void {
+    
+    @objc public func textColorKey(key:String) {
+        textColor_SkinKey = key
+//        print(textColor_SkinKey)
+        self.backgroundColor = HXH_Skin.color(key: textColor_SkinKey!);
+    }
+    
+    override public func skinFresh() -> Void {
         
-        if(backGroudcolor_SkinKey.count > 0){
-            self.backgroundColor = HXH_Skin.color(key: backGroudcolor_SkinKey);
+        if(backGroudcolor_SkinKey?.count ?? 0 > 0){
+            self.backgroundColor = HXH_Skin.color(key: backGroudcolor_SkinKey!);
         }
-        if(textColor_SkinKey.count > 0){
-            self.textColor = HXH_Skin.color(key: textColor_SkinKey);
+        
+        if(textColor_SkinKey?.count ?? 0 > 0){
+            self.textColor = HXH_Skin.color(key: textColor_SkinKey!);
         }
     }
 }
